@@ -12,7 +12,7 @@
     <string name="btn_paseos">Paseos</string>
     <string name="btn_historial">Historial</string>
     <string name="btn_ajustes">Ajustes</string>
-    <string name="ingresar_precio">Precio</string>
+    <string name="ingresar_precio">Hora</string>
     <string name="ingresar_duracion_paseo">Duracion paseo</string>
     <string name="btn_solicitar_paseo">Solicitar Paseo</string>
     <string name="forgot_password">¿Olvidaste tu contraseña?</string>
