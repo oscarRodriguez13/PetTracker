@@ -52,5 +52,6 @@
     <string name="duracion_paseo">40 minutos</string>
     <string name="precio_paseo">$40.000 COP</string>
     <string name="distancia_mascota">Distancia: 3Km</string>
+    <string name="descripcion">Descripcion</string>
 
 </resources>
