@@ -14,9 +14,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="90dp"
+        android:layout_marginBottom="10dp"
         android:layout_above="@id/titulo_registro"
-        app:srcCompat="@drawable/mascotas_icon" />
+        android:layout_below="@+id/tvCurrentPet"
+        app:srcCompat="@drawable/labrador" />
 
     <TextView
         android:id="@+id/titulo_registro"
@@ -27,14 +28,15 @@
         android:layout_marginTop="10dp"
         android:text="@string/titulo_registro_de_mascotas"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/etPetName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nombre_de_la_mascota_registro"
-        android:layout_above="@+id/etSpecies"
+        android:layout_centerInParent="true"
         android:inputType="textPersonName"
         android:padding="12dp"
         android:layout_marginLeft="30dp"
@@ -46,13 +48,13 @@
         android:id="@+id/etSpecies"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:hint="@string/especie_registro"
+        android:layout_below="@+id/etPetName"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:hint="@string/especie_registro"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/etBreed"
@@ -117,7 +119,7 @@
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:layout_below="@id/ageSeekBar"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginStart="90dp"/>
 
     <ImageButton
@@ -127,7 +129,8 @@
         app:srcCompat="@android:drawable/ic_menu_camera"
         android:layout_below="@+id/ageSeekBar"
         android:layout_marginStart="220dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="35dp"
+        android:background="#6B9BFA" />
 
     <Button
         android:id="@+id/buttonNext"
@@ -135,7 +138,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/addImageButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/btn_siguiente" />
+        android:layout_marginTop="30dp"
+        android:text="@string/btn_siguiente"
+        style="@style/ButtonStyle" />
 
 </RelativeLayout>

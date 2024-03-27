@@ -54,15 +54,6 @@ class SolicitarPaseoActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val perfilButton = findViewById<Button>(R.id.perfil_paseador)
-        perfilButton.setOnClickListener {
-            val intent = Intent(
-                applicationContext,
-                PerfilPaseadorActivity::class.java
-            )
-            startActivity(intent)
-        }
-
         val historialButton = findViewById<Button>(R.id.buttonOption2)
         historialButton.setOnClickListener {
             val intent = Intent(

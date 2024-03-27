@@ -63,14 +63,15 @@
 
     </RelativeLayout>
 
-
-    <WebView
-        android:id="@+id/webViewMap"
+    <ImageView
+        android:id="@+id/mapImage"
         android:layout_width="match_parent"
         android:layout_height="480dp"
         android:layout_below="@id/headerLayout"
+        android:layout_above="@+id/relativeLayoutBelowWebView"
         android:layout_marginTop="10dp"
-        tools:ignore="WebViewLayout" />
+        android:scaleType="fitXY"
+        android:src="@drawable/mapa" />
 
     <RelativeLayout
         android:id="@+id/relativeLayoutBelowWebView"
@@ -82,21 +83,22 @@
 
 
         <EditText
-            android:id="@+id/etPrecioPaseo"
+            android:id="@+id/etHora"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/ingresar_precio"
-            android:inputType="textCapWords"
             android:padding="8dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:hint="Hora"
+            android:focusable="false"
+            android:clickable="true" />
 
         <EditText
             android:id="@+id/etDuracionPaseo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/etPrecioPaseo"
+            android:layout_below="@+id/etHora"
             android:hint="@string/ingresar_duracion_paseo"
-            android:inputType="textEmailAddress"
+            android:inputType="number"
             android:padding="8dp"
             android:textColor="@color/black"/>
 
@@ -109,7 +111,8 @@
             android:text="@string/btn_solicitar_paseo"
             android:textSize="15sp"
             android:layout_marginTop="14dp"
-            android:layout_marginBottom="5dp" />
+            android:layout_marginBottom="5dp"
+            style="@style/ButtonStyle" />
 
     </RelativeLayout>
 

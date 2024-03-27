@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:padding="12dp">
 
     <RelativeLayout
         android:id="@+id/headerLayout"
@@ -62,54 +63,24 @@
 
     </RelativeLayout>
 
-
-    <WebView
-        android:id="@+id/webViewMap"
+    <ImageView
+        android:id="@+id/mapImage"
         android:layout_width="match_parent"
         android:layout_height="480dp"
         android:layout_below="@id/headerLayout"
-        android:layout_above="@+id/relativeLayoutBelowWebView"
         android:layout_marginTop="10dp"
-        tools:ignore="WebViewLayout" />
+        android:scaleType="fitXY"
+        android:src="@drawable/captura_de_pantalla_2024_03_05_220649" />
 
     <RelativeLayout
         android:id="@+id/relativeLayoutBelowWebView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mapImage"
         android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="12dp">
-
-        <Button
-            android:id="@+id/perfil_paseador"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:text="@string/btn_perfil" />
-
-        <Button
-            android:id="@+id/Aceptar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/perfil_paseador"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="-6dp"
-            android:layout_marginRight="19dp"
-            android:text="@string/btn_aceptar" />
-
-        <Button
-            android:id="@+id/Rechazar"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Aceptar"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="18dp"
-            android:text="@string/btn_rechazar"
-            android:textSize="12dp" />
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:id="@+id/foto_perfil_paseador"
@@ -168,5 +139,24 @@
             android:text="@string/precio_paseo" />
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/Aceptar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutBelowWebView"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_aceptar"
+        style="@style/ButtonStyle" />
+
+    <Button
+        android:id="@+id/Rechazar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Aceptar"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_rechazar"
+        style="@style/ButtonStyle" />
 
 </RelativeLayout>
