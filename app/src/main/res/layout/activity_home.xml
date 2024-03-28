@@ -81,36 +81,43 @@
         android:paddingHorizontal="20dp"
         android:layout_marginTop="12dp">
 
+        <Spinner
+            android:id="@+id/spinner_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog" />
 
         <EditText
-            android:id="@+id/etHora"
+            android:id="@+id/etHoraInicial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:textColor="@color/black"
-            android:hint="Hora"
+            android:layout_below="@+id/spinner_options"
+            android:hint="Hora inicial"
             android:focusable="false"
             android:clickable="true" />
 
         <EditText
-            android:id="@+id/etDuracionPaseo"
+            android:id="@+id/etHoraFinal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/etHora"
-            android:hint="@string/ingresar_duracion_paseo"
-            android:inputType="number"
             android:padding="8dp"
-            android:textColor="@color/black"/>
+            android:layout_below="@+id/etHoraInicial"
+            android:textColor="@color/black"
+            android:hint="Hora final"
+            android:focusable="false"
+            android:clickable="true" />
 
         <Button
             android:id="@+id/btn_solicitud_paseo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/etDuracionPaseo"
+            android:layout_below="@id/etHoraFinal"
             android:text="@string/btn_solicitar_paseo"
             android:textSize="15sp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             style="@style/ButtonStyle" />
 

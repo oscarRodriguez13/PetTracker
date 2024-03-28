@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.RatingBar
+import android.widget.Toast
 
 class FinalizarPaseoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +19,13 @@ class FinalizarPaseoActivity : AppCompatActivity() {
                 HomeActivity::class.java
             )
             startActivity(intent)
+        }
+
+        val ratingBar = findViewById<RatingBar>(R.id.ratingBar)
+        ratingBar.setOnRatingBarChangeListener { _, rating, fromUser ->
+            if (fromUser) {
+                Toast.makeText(this, "Calificación seleccionada: $rating", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
