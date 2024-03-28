@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation ("com.wdullaer:materialdatetimepicker:4.2.3")
     implementation ("com.google.code.gson:gson:2.8.8")
     implementation("androidx.core:core-ktx:1.12.0")
