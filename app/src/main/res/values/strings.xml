@@ -54,5 +54,6 @@
     <string name="distancia_mascota">Distancia: 3Km</string>
     <string name="descripcion">Descripcion</string>
     <string name="continuar">Continuar</string>
+    <string name="terminar">Terminar</string>
 
 </resources>

@@ -32,7 +32,8 @@
             android:layout_alignBaseline="@id/imageView"
             android:text="@string/btn_paseos"
             android:textColor="@color/black"
-            android:background="@android:color/transparent"/>
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
 
         <Button
             android:id="@+id/buttonOption2"

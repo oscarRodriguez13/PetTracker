@@ -7,11 +7,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.timepicker.MaterialTimePicker
-import com.google.android.material.timepicker.TimeFormat
 import java.util.Calendar
 import java.util.Locale
 
@@ -98,11 +96,12 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        /*val spinner = findViewById<Spinner>(R.id.spinner_options)
-        val options = arrayOf("Opción 1", "Opción 2", "Opción 3", "Opción 4") // Lista de opciones
-        val selectedOptions = booleanArrayOf(false, false, false, false) // Arreglo para almacenar las opciones seleccionadas
+        val selectionSummaryTextView = findViewById<TextView>(R.id.tv_option)
+        val selectOptionsButton = findViewById<Button>(R.id.button_options)
+        val options = arrayOf("Opción 1", "Opción 2", "Opción 3", "Opción 4")
+        val selectedOptions = booleanArrayOf(false, false, false, false)
 
-        spinner.setOnClickListener {
+        selectOptionsButton.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Seleccione las opciones")
 
@@ -111,14 +110,11 @@ class HomeActivity : AppCompatActivity() {
             }
 
             builder.setPositiveButton("Aceptar") { _, _ ->
-                // Manejar las opciones seleccionadas
-                val selectedItems = mutableListOf<String>()
-                for (i in options.indices) {
-                    if (selectedOptions[i]) {
-                        selectedItems.add(options[i])
-                    }
-                }
-                // Aquí puedes manejar las opciones seleccionadas
+                val selectedItemsText = options.indices
+                    .filter { selectedOptions[it] }
+                    .joinToString { options[it] }
+
+                selectionSummaryTextView.text = "$selectedItemsText" + ", "
             }
 
             builder.setNegativeButton("Cancelar") { dialog, _ ->
@@ -127,7 +123,7 @@ class HomeActivity : AppCompatActivity() {
 
             val dialog = builder.create()
             dialog.show()
-        }*/
+        }
 
     }
 

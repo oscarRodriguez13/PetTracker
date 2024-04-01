@@ -27,5 +27,14 @@ class FinalizarPaseoActivity : AppCompatActivity() {
                 Toast.makeText(this, "Calificación seleccionada: $rating", Toast.LENGTH_SHORT).show()
             }
         }
+
+        val historialButton = findViewById<Button>(R.id.buttonOption2)
+        historialButton.setOnClickListener {
+            val intent = Intent(
+                applicationContext,
+                HistorialActivity::class.java
+            )
+            startActivity(intent)
+        }
     }
 }
